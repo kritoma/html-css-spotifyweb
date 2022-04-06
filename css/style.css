@@ -20,6 +20,10 @@ button{
     border: 1px solid white;
 }
 
+/* color */
+.white{
+    color: white;
+}
 
 /* header */
 header{
@@ -38,13 +42,105 @@ main{
     display: flex;
 }
 
-/* inside */
-.inside{
+/* aside */
+.aside{
+    flex-shrink: 0;
     width: 200px;
     background-color: black;
     height: calc(100vh - 100px);
+    display: flex;
+    flex-wrap: wrap;
 }
 
+.logo img{
+    width: 80%;
+    padding: 20px;
+}
+
+
+/* punti in comune della aside */
+.aside a{
+    text-decoration: none;
+    color: #696969;
+    vertical-align: middle;
+    transition: color 0.25s;
+}
+
+.aside a:hover{
+    color: white;
+}
+
+/* nav */
+nav ul{
+    margin-bottom: 20px;
+}
+
+nav ul li{
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+nav ul li a img{
+    height: 35px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+nav ul li:first-child{
+    border-left: 3px solid #adff2f;
+}
+
+nav .white{
+    color: white;
+}
+
+/* playlist */
+.playlist{
+    padding-left: 20px;
+}
+
+.playlist h4{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.playlist ul li{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.playlist i{
+    font-size: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* end-aside */
+.end-aside{
+    padding-left: 20px;
+    align-self: flex-end;
+}
+
+.end-aside span{
+    vertical-align: middle;
+}
+
+.end-aside img{
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.end-aside .profile{
+    background-color: gray;
+    color: white;
+    border-radius: 50%;
+    height: 30px;
+}
+
+hr{
+    margin: 10px 0;
+}
 /* collection */
 .collection{
     background-color: #141922;
@@ -55,4 +151,5 @@ main{
 /* footer */
 footer{
     height: 100px;
+    z-index: 10;
 }
