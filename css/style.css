@@ -1,0 +1,58 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* typo */
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* button */
+button{
+    background-color: transparent;
+    padding: 15px 40px;
+    border-radius: 40px;
+    font-weight: 700;
+    color: white;
+    border: 1px solid white;
+}
+
+
+/* header */
+header{
+    width: calc(100% - 200px);
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 10px;
+}
+
+/* main */
+main{
+    display: flex;
+}
+
+/* inside */
+.inside{
+    width: 200px;
+    background-color: black;
+    height: calc(100vh - 100px);
+}
+
+/* collection */
+.collection{
+    background-color: #141922;
+    height: calc(100vh - 100px);
+    width: calc(100% - 200px);
+}
+
+/* footer */
+footer{
+    height: 100px;
+}
