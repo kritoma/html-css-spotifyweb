@@ -138,7 +138,7 @@ nav .white{
     height: 30px;
 }
 
-hr{
+.aside hr{
     margin: 10px 0;
 }
 /* collection */
@@ -146,10 +146,129 @@ hr{
     background-color: #141922;
     height: calc(100vh - 100px);
     width: calc(100% - 200px);
+    padding: 100px 20px 0 20px;
+    overflow-y: auto;
 }
 
+.top-collection ul{
+    display: flex;
+    list-style: none;
+    column-gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.top-collection a{
+    text-decoration: none;
+    color: #696969;
+    transition: color 0.25s;
+}
+
+.top-collection a:hover{
+    color: white;
+}
+
+.top-collection ul li{
+    position: relative;
+}
+
+.top-collection ul li:first-child::after{
+    content: "";
+    background-color: #adff2f;
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* bottom-collectio */
+.bottom-collection{
+    margin-bottom: 50px;
+}
+
+.bottom-collection h2{
+    color: white;
+    margin: 30px;
+    text-indent: -31px;
+}
+
+.flex{
+    display: flex;
+    gap: 20px;
+}
+
+.content{
+    width: calc(100% / 6 - 20px);
+}
+.content-top{
+    background-color: black;
+}
+
+.overlay{
+    opacity: 1;
+    transition: opacity 0.25s;
+    position: relative;
+}
+
+.content:hover .overlay{
+    opacity: 0.2;
+}
+
+.overlay::after{
+    content: "";
+    display: none;
+    font-size: 50px;
+    color: white;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: display 0.25s;
+}
+
+.content:hover .overlay::after{
+    display: block;
+}
+.content img{
+    width: 100%;
+}
+
+.content-bottom{
+    text-align: center;
+}
+
+.content-bottom h4{
+    color: white;
+    margin: 15px 0 8px 0;
+}
+
+.content-bottom span{
+    color: #696969;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.subtitles{
+    display: inline-block;
+    color: #696969;
+    position: relative;
+    bottom: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.circle{
+    border-radius: 50%;
+    overflow: hidden;
+}
 /* footer */
 footer{
     height: 100px;
     z-index: 10;
+    background-color: #282828;
 }
