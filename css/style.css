@@ -35,6 +35,7 @@ header{
     display: flex;
     justify-content: flex-end;
     padding: 20px 10px;
+    z-index: 9;
 }
 
 /* main */
@@ -271,4 +272,104 @@ footer{
     height: 100px;
     z-index: 10;
     background-color: #282828;
+    display: flex;
+    color: white;
+    padding: 10px;
+    align-items: center;
 }
+
+.footer-left, .footer-right{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.footer-center{
+    width: 50%;
+}
+
+.footer-left img{
+    height: 50px;
+    vertical-align: middle;
+}
+
+.piece{
+    margin-right: 40px;
+}
+
+.piece span{
+    font-size: 12px;
+    font-weight: 600;
+    color: #696969;
+}
+
+.footer-left i{
+    color: #696969;
+    transition: color 0.25s;
+}
+
+.footer-left i:hover{
+    color: white;
+}
+
+.footer-center-top{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 20px;
+}
+
+.up{
+    transition: transform 0.25s;
+}
+
+.up:hover{
+    transform: scale(1.5);
+}
+
+
+.footer-center-bottom{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.barra{
+    display: inline-block;
+    width: 70%;
+    height: 4px;
+    background-color: #696969;
+    vertical-align: middle
+    
+}
+
+.footer-center-bottom::before{
+    content: "0:25";
+    display: inline-block;
+}
+
+.footer-center-bottom::after{
+    content: "4:35";
+    display: inline-block;
+}
+
+.upload{
+    width: 30%;
+    height: 4px;
+    background-color: white;
+    transition: background-color 0.25s;
+}
+
+.barra:hover .upload{
+    background-color: #adff2f;
+}
+
+.footer-right{
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.footer-right .barra{
+    width: 40%;
+}
+
