@@ -57,6 +57,7 @@ main{
     height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .logo-big{
@@ -74,7 +75,6 @@ main{
     color: #696969;
     vertical-align: middle;
     transition: color 0.25s;
-    overflow: hidden;
 }
 
 .aside a:hover{
@@ -114,7 +114,6 @@ nav .white{
 /* playlist */
 .playlist{
     padding-left: 20px;
-    flex-grow: 1;
 }
 
 .playlist h4{
@@ -126,21 +125,27 @@ nav .white{
     margin-bottom: 20px;
 }
 
-.playlist ul li{
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
 .playlist i{
     font-size: 40px;
     vertical-align: middle;
     margin-right: 10px;
 }
 
-.playlist ul {
-    height: 100%;
+.playlist a{
+    vertical-align: middle;
+}
+
+.list-playlist  {
+    padding-left: 20px;
+    flex-grow: 1;
     overflow-y: auto;
 }
+
+.list-playlist ul li{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
 
 /* end-aside */
 .end-aside{
@@ -506,7 +511,7 @@ footer{
         text-align: center;
     }
 
-    .playlist{
+    .playlist, .list-playlist{
         display: none;
     }
 
