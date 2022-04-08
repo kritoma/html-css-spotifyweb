@@ -59,11 +59,14 @@ main{
     flex-direction: column;
 }
 
-.logo img{
+.logo-big{
     width: 80%;
     padding: 20px;
 }
 
+.logo-small{
+    display: none;
+}
 
 /* punti in comune della aside */
 .aside a{
@@ -71,6 +74,7 @@ main{
     color: #696969;
     vertical-align: middle;
     transition: color 0.25s;
+    overflow: hidden;
 }
 
 .aside a:hover{
@@ -111,12 +115,15 @@ nav .white{
 .playlist{
     padding-left: 20px;
     flex-grow: 1;
-    overflow-y: auto;
 }
 
 .playlist h4{
     color: white;
     margin-bottom: 10px;
+}
+
+.new-playlist{
+    margin-bottom: 20px;
 }
 
 .playlist ul li{
@@ -128,6 +135,11 @@ nav .white{
     font-size: 40px;
     vertical-align: middle;
     margin-right: 10px;
+}
+
+.playlist ul {
+    height: 100%;
+    overflow-y: auto;
 }
 
 /* end-aside */
@@ -330,11 +342,14 @@ footer{
 .footer-center-top{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 30px;
     font-size: 20px;
+    padding-top: 20px;
 }
 
 .up{
+    font-size: 30px;
     transition: transform 0.25s;
 }
 
@@ -345,7 +360,6 @@ footer{
 
 .footer-center-bottom{
     text-align: center;
-    margin-top: 20px;
 }
 
 .barra{
@@ -386,6 +400,17 @@ footer{
     gap: 20px;
 }
 
+.monitor{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.sound{
+    width: 40%;
+}
+
 .footer-right .barra{
     width: 40%;
 }
@@ -411,21 +436,73 @@ footer{
     .content{
         width: calc(100% / 4 - 20px);
     }
+
+    .top-collection ul li{
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 700px) {
     .content{
         width: calc(100% / 2 - 20px);
+    } 
+
+    /* footer */
+    .footer-right{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .piece{
+        margin-right: 5px;
+    }
+
+    .like  {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .monitor{
+        justify-content: center;
+    }
+
+    .sound{
+        width: 100%;
+        text-align: center;
     }
 }
 
 @media screen and (max-width: 600px) {
+    /* header */
+    header{
+        width: calc(100% - 50px);
+    }
+
+    /* aside */
+    .aside{
+        width: 50px;
+        align-items: center;
+    }
+
+    .aside svg{
+        height: 30px;
+        margin-right: 0;
+        text-align: center;
+    }
+
     .aside span{
         display: none;
     }
 
     .aside nav{
+        margin-top: 10px;
+        width: 100%;
         flex-grow: 1;
+    }
+
+    .aside ul li{
+        padding-left: 0;
     }
 
     .playlist{
@@ -435,4 +512,35 @@ footer{
     .end-aside hr{
         display: none;
     }
+    
+    .end-aside{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px ;
+        padding-left: 0;
+    }
+
+
+    .logo-big{
+        display: none;
+    }
+
+    .logo-small{
+        display: block;
+        width: 30px;
+        padding-top: 20px;
+    }
+
+    /* collection */
+    .collection{
+        width: calc(100% - 50px);
+    }
+
+    /* footer */
+    .footer-left img{
+        height: 40px;
+    }
+   
+    
 }
